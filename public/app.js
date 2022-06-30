@@ -1,5 +1,5 @@
 const QuestionOwner = ({ name, avatar }) => (  
-    <div class="owner">
+    <div className="owner">
       <p>{name}</p>
       <img src={avatar} alt="Image of {name}"/>
     </div>
@@ -22,7 +22,7 @@ const Questions = ({ questions }) => (
   <div className="questions">
     {
       !questions ?
-        <p>Sorry, no data!</p>
+        <p className="noData">Sorry, no data! Try again later!</p>
       :
         questions.map((question, index) => (
           <Question title={question.title} link={question.link} key={index}  owner={question.owner}/>
