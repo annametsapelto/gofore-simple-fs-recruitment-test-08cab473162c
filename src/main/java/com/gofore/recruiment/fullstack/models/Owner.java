@@ -17,16 +17,21 @@ public class Owner {
     @JsonProperty("profile_image")
     public final String avatar;
 
+    public final int reputation;
+
     @JsonCreator
     public Owner(
-            @JsonProperty ("profile_image") String avatar,
+
             @JsonProperty("user_id") String userId,
             @JsonProperty("display_name") String displayName,
-            String location
+            String location,
+            @JsonProperty ("profile_image") String avatar,
+            int reputation
     ) {
         this.userId = userId;
         this.displayName = displayName;
         this.location = location;
         this.avatar = avatar;
+        this.reputation = reputation;
     }
 }

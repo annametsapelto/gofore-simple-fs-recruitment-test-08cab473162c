@@ -78,7 +78,7 @@ public class ReactJsController {
                             User u = iterU.next();
 
                             result.add(new Question(
-                                    new Owner(q.owner.userId, q.owner.displayName, u.location, q.owner.avatar),
+                                    new Owner(q.owner.userId, q.owner.displayName, u.location, q.owner.avatar, q.owner.reputation),
                                     q.title,
                                     q.link,
                                     q.isAnswered

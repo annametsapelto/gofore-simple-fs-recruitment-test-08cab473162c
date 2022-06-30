@@ -1,20 +1,19 @@
 const QuestionOwner = ({ name, avatar }) => (  
-<div>
-    <div>
+    <div class="owner">
       <p>{name}</p>
       <img src={avatar} alt="Image of {name}"/>
     </div>
-  </div>
   )
 
 
 const Question = ({ link, title, owner }) => (
+  console.log(owner),
   <div className="question">
     <div className="qa-pair">
       <h2>
         <a href={link}>{title}</a>
       </h2>           
-        <QuestionOwner key={index} name={owner.displayName} avatar={owner.avatar}/>
+        <QuestionOwner name={owner.display_name} avatar={owner.profile_image}/>
     </div>
   </div>
 );
